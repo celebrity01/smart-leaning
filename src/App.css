@@ -33,7 +33,9 @@
   flex: 1;
   position: relative;
   background: transparent;
-  min-height: calc(100vh - 200px);
+  overflow-y: auto;
+  padding-bottom: var(--space-8);
+  min-height: 0;
 }
 
 /* Loading States */

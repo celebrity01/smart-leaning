@@ -9,7 +9,7 @@
   background-size: 300% 300%;
   animation: gradientShift 25s ease infinite;
   color: var(--neutral-100);
-  padding: var(--space-20) var(--space-4) var(--space-8);
+  padding: var(--space-6) var(--space-4) var(--space-4);
   position: relative;
   overflow: hidden;
   border-top: 3px solid transparent;
@@ -102,8 +102,8 @@
 .footer-content {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
-  gap: var(--space-16);
-  margin-bottom: var(--space-16);
+  gap: var(--space-8);
+  margin-bottom: var(--space-6);
   animation: slideUp 0.8s ease-out;
 }
 
@@ -398,7 +398,7 @@
 /* Footer Bottom */
 .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: var(--space-8);
+  padding-top: var(--space-4);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -525,12 +525,12 @@
 
 @media (max-width: 768px) {
   .footer {
-    padding: var(--space-16) var(--space-4) var(--space-6);
+    padding: var(--space-4) var(--space-4) var(--space-3);
   }
-  
+
   .footer-content {
     grid-template-columns: 1fr;
-    gap: var(--space-10);
+    gap: var(--space-6);
   }
   
   .footer-brand {
@@ -588,7 +588,7 @@
 
 @media (max-width: 480px) {
   .footer {
-    padding: var(--space-12) var(--space-3) var(--space-4);
+    padding: var(--space-3) var(--space-3) var(--space-2);
   }
   
   .footer-logo-text {
