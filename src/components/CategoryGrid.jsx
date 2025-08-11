@@ -47,17 +47,13 @@ function CategoryGrid({ onSelectCategory }) {
   ]
 
   return (
-    <div className="category-grid">
-      <div className="intro-section">
-        <div className="academic-notice">
+    <div className="category-grid paint-optimized">
+      <div className="intro-section layout-stable">
+        <div className="academic-notice compact">
           <div className="notice-icon">⚠️</div>
           <div className="notice-content">
-            <h3 className="notice-title">Academic Guidance Notice</h3>
             <p className="notice-text">
-              This platform serves as a supplementary learning tool. For comprehensive understanding,
-              clarification of concepts, and academic guidance, students are strongly encouraged to
-              consult with their course lecturers and attend scheduled classes. Your lecturers remain
-              your primary source for official course information and assessment criteria.
+              <strong>Note:</strong> Supplementary tool. Consult your lecturer for official guidance.
             </p>
           </div>
         </div>
@@ -69,18 +65,27 @@ function CategoryGrid({ onSelectCategory }) {
         </p>
       </div>
       
-      <div className="categories-container">
+      <div className="categories-container scrollable-container">
         {categories.map(category => (
-          <div 
+          <div
             key={category.id}
-            className="category-card"
+            className="category-card gpu-accelerated paint-optimized"
             style={{ '--card-color': category.color }}
+            role="button"
+            tabIndex={0}
+            aria-label={`Start ${category.title} learning path`}
             onClick={() => onSelectCategory(category)}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault()
+                onSelectCategory(category)
+              }
+            }}
           >
-            <div className="category-icon">{category.icon}</div>
+            <div className="category-icon" aria-hidden="true">{category.icon}</div>
             <h3 className="category-title">{category.title}</h3>
             <p className="category-description">{category.description}</p>
-            <button className="category-button">Start Learning</button>
+            <span className="category-button" aria-hidden="true">Start Learning</span>
           </div>
         ))}
       </div>

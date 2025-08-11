@@ -11,11 +11,10 @@ function PDFViewer({ onBack }) {
       </div>
       
       <div className="pdf-content">
-        <div className="pdf-academic-notice">
+        <div className="pdf-academic-notice compact">
           <span className="notice-icon">⚠️</span>
           <p className="notice-text">
-            <strong>Academic Notice:</strong> This document provides supplementary exercise solutions.
-            For comprehensive understanding and official guidance, consult with your course lecturer.
+            <strong>Note:</strong> Supplementary solutions. Consult lecturer for guidance.
           </p>
         </div>
 
